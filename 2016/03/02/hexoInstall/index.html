@@ -3,17 +3,48 @@
 <head>
   <meta charset="utf-8">
   
-  <title>张德宇的技术博客</title>
+  <title>Mac下实现github创建静态博客 | 张德宇的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张德宇的技术博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Mac下实现github创建静态博客
+
+
+安装环境
+创建博客
+
+
+
+配置环境现在在github上创建的静态微博,大多部分是用hexo来实现的,而且hexo最好用npm来安装,npm是node.js来安装的.
+一步一步来安装,在Mac下安装环境个人觉得挺烦,所以要慢慢来.
+###安装node.js1curl  https://raw.github.com/creationix/nvm/master/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac下实现github创建静态博客">
+<meta property="og:url" content="http://yoursite.com/2016/03/02/hexoInstall/index.html">
 <meta property="og:site_name" content="张德宇的技术博客">
-<meta property="og:description">
+<meta property="og:description" content="Mac下实现github创建静态博客
+
+
+安装环境
+创建博客
+
+
+
+配置环境现在在github上创建的静态微博,大多部分是用hexo来实现的,而且hexo最好用npm来安装,npm是node.js来安装的.
+一步一步来安装,在Mac下安装环境个人觉得挺烦,所以要慢慢来.
+###安装node.js1curl  https://raw.github.com/creationix/nvm/master/">
+<meta property="og:updated_time" content="2016-03-02T06:41:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张德宇的技术博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Mac下实现github创建静态博客">
+<meta name="twitter:description" content="Mac下实现github创建静态博客
+
+
+安装环境
+创建博客
+
+
+
+配置环境现在在github上创建的静态微博,大多部分是用hexo来实现的,而且hexo最好用npm来安装,npm是node.js来安装的.
+一步一步来安装,在Mac下安装环境个人觉得挺烦,所以要慢慢来.
+###安装node.js1curl  https://raw.github.com/creationix/nvm/master/">
   
     <link rel="alternate" href="/atom.xml" title="张德宇的技术博客" type="application/atom+xml">
   
@@ -62,9 +93,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hexoInstall" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexoInstall" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/02/hexoInstall/" class="article-date">
   <time datetime="2016-03-02T05:53:39.000Z" itemprop="datePublished">2016-03-02</time>
@@ -77,8 +106,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/02/hexoInstall/">Mac下实现github创建静态博客</a>
+    <h1 class="article-title" itemprop="name">
+      Mac下实现github创建静态博客
     </h1>
   
 
@@ -117,51 +146,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-NStimer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/02/NStimer/" class="article-date">
-  <time datetime="2016-03-02T05:37:28.000Z" itemprop="datePublished">2016-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/02/NStimer/">NStimer</a>
-    </h1>
+    <a href="/2016/03/02/NStimer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">NStimer</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>小试牛刀.</p>
-<p>1,添加定时器:<br>timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];<br>然后用runloop进行监听,在用户做别的操作情况下不影响计时器操作<br>[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];</p>
-<p>2,移除定时器<br>[timerinvalidate];<br>timer = nil;</p>
-<hr>
-<p>需要注意的是,无论在什么时候去掉定时器的时候一定要在主线程中把定时器去掉<br>dispatch_async(dispatch_get_main_queue(), ^{<br>[self removetimer];<br>[self addtimer];<br>})</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/NStimer/" data-id="cilah65hn00014hka7msy5fwh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
