@@ -2,126 +2,282 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>NStimer | 追客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/app.css">
-  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    NStimer
+  
+</title>
+
+<meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NStimer">
+<meta property="og:url" content="http://yoursite.com/2016/03/02/NStimer/index.html">
+<meta property="og:site_name" content="张德宇的技术博客">
+<meta property="og:description">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/%E4%B8%8B%E8%BD%BD.jpeg">
+<meta property="og:updated_time" content="2016-03-02T09:51:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NStimer">
+<meta name="twitter:description">
+<meta name="twitter:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/%E4%B8%8B%E8%BD%BD.jpeg">
+
+
+  <link rel="alternative" href="/atom.xml" title="张德宇的技术博客" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
 </head>
-
-<body>
-  <nav class="app-nav">
+<body
   
-      
-        <a class="active" href="/.">home</a>
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">张德宇的技术博客</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">张德宇的技术博客</a></h1>
+    
+    <div class="info">
+      <div class="content">
         
+        
+          <div class="author">zhangdeyu</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">分类</a>
+                
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">标签</a>
+                
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">2</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
 
+    <div class="main-content">
       
+        <div style="max-width: 1000px">
+      
+          <article id="post-NStimer" class="article article-type-post">
   
-      
-        <a href="/archives">archive</a>
-      
+    <h1 class="article-header">
+      NStimer
+    </h1>
   
-      
-        <a href="/about">about</a>
-      
   
-      
-        <a href="/atom.xml">rss</a>
-      
-  
-</nav>
 
-  <main class="post">
-  <article>
-  <h1 class="article-title">
-    <a href="/2016/03/02/NStimer/">NStimer</a>
-  </h1>
+  <div class="article-info">
+    <span class="article-date">
+  2016-03-02
+</span>
 
-  <section class="article-meta">
-    <p class="article-date">March 02 2016</p>
-  </section>
+    
 
-  <section class="article-entry">
-    <p>小试牛刀.</p>
+    
+
+  </div>
+  <div class="article-entry">
+    <hr>
+<p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/%E4%B8%8B%E8%BD%BD.jpeg" alt="cmd-markdown-logo"></p>
+<a id="more"></a>
+<p>#定时器</p>
 <p>1,添加定时器:<br>timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];<br>然后用runloop进行监听,在用户做别的操作情况下不影响计时器操作<br>[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];</p>
 <p>2,移除定时器<br>[timerinvalidate];<br>timer = nil;</p>
 <hr>
 <p>需要注意的是,无论在什么时候去掉定时器的时候一定要在主线程中把定时器去掉<br>dispatch_async(dispatch_get_main_queue(), ^{<br>[self removetimer];<br>[self addtimer];<br>})</p>
 
-  </section>
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="署名-相同方式共享">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
 </article>
 
-  <div class="sharing grid">
-  <section class="profile grid-item grid">
-    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar" />
-    <div class="grid-item">
-      <p class="title"> 追客 </p>
-      <p class="subtitle"> You are the JavaScript in my HTML </p>
-    <div>
-  </section>
 
-  <section class="share-btns">
-    <p> share it if you like it~ </p>
-    <!-- <a
-  class="twitter-share-button"
-  data-size="large"
-  data-via="DrakeLeung"
-  href="https://twitter.com/intent/tweet?text=小试牛刀.</p>
-<p>1,添加定时器"
->
-  Tweet
-</a>
 
-<script>
-  window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  js.async = true;
-  fjs.parentNode.insertBefore(js, fjs);
 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
 
-  return t;
-}(document, "script", "twitter-wjs"));
-</script>
- -->
-  </section>
+
+
+          <div class="main-footer">
+  
+    © 2016 张德宇的技术博客 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
 </div>
 
-
-  
-    
-<section class="article-comment">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      
+        </div>
+      
+    </div>
   </div>
-</section>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<script>
-  var disqus_shortname = 'drakeleung';
-  
-  var disqus_url = 'http://yoursite.com/2016/03/02/NStimer/';
-  
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
 
 
-  
-</main>
+<script src="/scripts/main.js"></script>
 
 </body>
 </html>
