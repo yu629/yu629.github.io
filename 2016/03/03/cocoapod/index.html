@@ -8,19 +8,22 @@
 
 <title>
   
-    归档: 2016/3
+    CocoaPods管理
   
 </title>
 
 <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张德宇的技术博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/03/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CocoaPods管理">
+<meta property="og:url" content="http://yoursite.com/2016/03/03/cocoapod/index.html">
 <meta property="og:site_name" content="张德宇的技术博客">
 <meta property="og:description">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/cocoapods-logo.png">
+<meta property="og:updated_time" content="2016-03-03T05:55:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张德宇的技术博客">
+<meta name="twitter:title" content="CocoaPods管理">
 <meta name="twitter:description">
+<meta name="twitter:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/cocoapods-logo.png">
 
 
   <link rel="alternative" href="/atom.xml" title="张德宇的技术博客" type="application/atom+xml">
@@ -135,130 +138,73 @@
       
         <div style="max-width: 1000px">
       
-          
-
+          <article id="post-cocoapod" class="article article-type-post">
+  
+    <h1 class="article-header">
+      CocoaPods管理
+    </h1>
   
   
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
-        </div>
-        <div class="post-list">
-    
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2016/03/03/cocoapod/" >
-  CocoaPods管理
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2016/03/03/cocoapod/"><span class="article-date">
+  <div class="article-info">
+    <span class="article-date">
   2016-03-03
 </span>
-</a>
-        
 
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/cocoapods-logo.png" alt="cmd-markdown-logo"></p>
-          <p>
-            <a href="/2016/03/03/cocoapod/">
-              阅读全文
-            </a>
-          </p>
-        
-      </div>
-    </div>
-
-  
-
-  
-  
     
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2016/03/02/hexoInstall/" >
-  Mac下实现github创建静态博客
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2016/03/02/hexoInstall/"><span class="article-date">
-  2016-03-02
-</span>
-</a>
-        
-
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/images.png" alt="cmd-markdown-logo"></p>
-          <p>
-            <a href="/2016/03/02/hexoInstall/">
-              阅读全文
-            </a>
-          </p>
-        
-      </div>
-    </div>
-
-  
-
-  
-  
     
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2016/03/02/NStimer/" >
-  NStimer
-</a>
+  </div>
+  <div class="article-entry">
+    <p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/cocoapods-logo.png" alt="cmd-markdown-logo"></p>
+<a id="more"></a>
+<ul>
+<li>安装环境</li>
+<li>CocoaPods的使用 </li>
+</ul>
+<p>###安装环境<br>首先使用pod命令在terminal中,要安装nvm,用nvm来安装Ruby.</p>
+<p>##安装nvm<br>rvm是一个命令行工具，可以提供一个便捷的多版本ruby环境的管理和切换.关于nvm的介绍在<a href="http://ruby-china.org/wiki/rvm-guide里写的很清楚了,这里我就不多说了" target="_blank" rel="external">http://ruby-china.org/wiki/rvm-guide里写的很清楚了,这里我就不多说了</a>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -L https://get.rvm.io | bash -s stable</span><br></pre></td></tr></table></figure>
+<p>然后载入nvm环境</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.rvm/scripts/rvm</span><br></pre></td></tr></table></figure>
+<p>之后查看一下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rvm -v</span><br></pre></td></tr></table></figure></p>
+<p>##安装Ruby<br>在上面如果nvm安装完成,可以通过nvm来安装Ruby,</p>
+<p>查看版本信息,选择将要安装的版本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rvm list known</span><br><span class="line">$ rvm install <span class="number">2.0</span><span class="number">.0</span></span><br></pre></td></tr></table></figure></p>
+<p>想要卸载版本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rvm remove <span class="number">1.9</span><span class="number">.2</span></span><br></pre></td></tr></table></figure></p>
+<p>或者使用homebrew工具直接安装Ruby<br>原理就是从homebrew 的 GitHub 仓库抓取最新版本并自动完成安装。安装成功后，即可使用 brew 命令来安装 Ruby 的最新版本.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e <span class="string">"$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"</span></span><br></pre></td></tr></table></figure></p>
+<p>安装命令如下:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install ruby</span><br></pre></td></tr></table></figure></p>
+<p>###使用CocoaPods<br>CocoaPods做iOS程序的依赖管理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br><span class="line">pod setup</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$gem source -r https://rubygems.org/</span><br><span class="line">$ gem source -a https://ruby.taobao.org</span><br><span class="line">$ gem sources -l</span><br></pre></td></tr></table></figure>
+<p>正常输出</p>
+<p>CURRENT SOURCES<br><a href="http://ruby.taobao.org/" target="_blank" rel="external">http://ruby.taobao.org/</a></p>
+<p>之后就可以开发使用了.</p>
+<p>简单说一下开发阶段的使用:<br>在工程目录下:<br>pod init创建文件之后,编译PodFile文件,将要引入的文件放进去.重新<br>pod setup下就完成了.</p>
 
-      </h3>
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" title="署名-相同方式共享">
+      <img src="/images/cc/cc.png">
       
-
-      <div class="article-info">
-        <a href="/2016/03/02/NStimer/"><span class="article-date">
-  2016-03-02
-</span>
-</a>
+          <img src="/images/cc/by.png">
         
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
+      </span>
+    </a>
+  </div>
 
-        
 
-      </div>
-      <div class="article-entry">
-        
-          <hr>
-<p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/%E4%B8%8B%E8%BD%BD.jpeg" alt="cmd-markdown-logo"></p>
-          <p>
-            <a href="/2016/03/02/NStimer/">
-              阅读全文
-            </a>
-          </p>
-        
-      </div>
-    </div>
+    
 
-  
+  </footer>
+</article>
+
 
 
 
