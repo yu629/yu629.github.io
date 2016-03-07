@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>NStimer | 张德宇的技术博客</title>
+  <title>IOS INTERFACES WITH XCODE PLAYGROUNDS | 张德宇的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NStimer">
-<meta property="og:url" content="http://yoursite.com/2016/03/02/NStimer/index.html">
+<meta property="og:title" content="IOS INTERFACES WITH XCODE PLAYGROUNDS">
+<meta property="og:url" content="http://yoursite.com/2016/03/07/playground/index.html">
 <meta property="og:site_name" content="张德宇的技术博客">
 <meta property="og:description">
-<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/174946_medium.jpg">
-<meta property="og:updated_time" content="2016-03-04T06:57:25.000Z">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/xcode_by_skandelabro.jpg">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/03FFCE28-F167-44FE-A88E-01AC03AAC99A.png">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/950C39D2-A0AF-4643-ACA5-7EC71CD911CD.png">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/E409D51C-45A0-4AFF-9C5C-D8D1F9D72E68.png">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/57E0EFE8-376E-4E64-A619-72F431408DBF.png">
+<meta property="og:updated_time" content="2016-03-07T08:55:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NStimer">
+<meta name="twitter:title" content="IOS INTERFACES WITH XCODE PLAYGROUNDS">
 <meta name="twitter:description">
-<meta name="twitter:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/174946_medium.jpg">
+<meta name="twitter:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/xcode_by_skandelabro.jpg">
   
     <link rel="alternative" href="/atom.xml" title="张德宇的技术博客" type="application/atom+xml">
   
@@ -194,11 +198,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-NStimer" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-playground" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/02/NStimer/" class="article-date">
-      <time datetime="2016-03-02T05:37:28.000Z" itemprop="datePublished">2016-03-02</time>
+      <a href="/2016/03/07/playground/" class="article-date">
+      <time datetime="2016-03-07T08:53:44.000Z" itemprop="datePublished">2016-03-07</time>
 </a>
     </div>
   
@@ -211,7 +215,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      NStimer
+      IOS INTERFACES WITH XCODE PLAYGROUNDS
     </h1>
   
 
@@ -222,7 +226,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NStimer/">NStimer</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Playground/">Playground</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -232,14 +236,21 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/174946_medium.jpg" alt="cmd-markdown-logo"></p>
+        <p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/xcode_by_skandelabro.jpg" alt="cmd-markdown-logo"></p>
 <a id="more"></a>
-<p>#定时器</p>
-<p>1,添加定时器:<br>timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];<br>然后用runloop进行监听,在用户做别的操作情况下不影响计时器操作<br>[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];</p>
-<p>2,移除定时器<br>[timerinvalidate];<br>timer = nil;</p>
+<h3 id="playGrounp"><a href="#playGrounp" class="headerlink" title="playGrounp"></a>playGrounp</h3><p>在开发过程中我们可以使用Storyboard或XIB文件。Storyboard让我们构建一个完整的界面和流动非常快。我们可以定义视图布局,直接在一个文件视图和视图转换关系。也给了我们一个很好的应用程序概述。XIB文件基本上是面对一个视图。一个故事板文件可以保存多个视图控制器但XIB文件只能持有一个视图控制器</p>
+<p>Storyboard有一些缺陷。他们很难重用和协作不友好(合并冲突可能很难解决)。对单个开发人员和小型项目很适用,但不建议用于复杂的应用程序。另一方面,XIB文件更可重用的和不太可能有冲突,但即便如此,如果应用程序被设计使用一个独特的外观和感觉,然后写你的界面代码是正确的选择。Interface Builder的使用作为一种快捷方式,作为临时简化的接口,因为它可以让你更快从理念到产品,帮助你更加关注运输而不是娱乐</p>
 <hr>
-<p>需要注意的是,无论在什么时候去掉定时器的时候一定要在主线程中把定时器去掉<br>dispatch_async(dispatch_get_main_queue(), ^{<br>[self removetimer];<br>[self addtimer];<br>})</p>
+<h2 id="什么是-playGrounp"><a href="#什么是-playGrounp" class="headerlink" title="什么是 playGrounp"></a>什么是 playGrounp</h2><p>Plgrounp是一个快速学习的模式,不用建立工程,看到代码执行结果.但是也是存在缺陷就是没有交互输入</p>
+<h2 id="创建playGrounp"><a href="#创建playGrounp" class="headerlink" title="创建playGrounp"></a>创建playGrounp</h2><h3 id="1-创建playGrounp"><a href="#1-创建playGrounp" class="headerlink" title="1. 创建playGrounp"></a>1. 创建playGrounp</h3><p>首先打开xcode来创建一个 new Single View Application<br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/03FFCE28-F167-44FE-A88E-01AC03AAC99A.png" alt="cmd-markdown-logo"></p>
+<p>然后在创建一个选swift语言<br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/950C39D2-A0AF-4643-ACA5-7EC71CD911CD.png" alt="cmd-markdown-logo"></p>
+<p>接着就继续创建一个playgrounp,快捷键是command+N,iOS下选择source -&gt;playgrounp.<br>创建之后工程会出现:<br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/E409D51C-45A0-4AFF-9C5C-D8D1F9D72E68.png" alt="cmd-markdown-logo"></p>
+<p>这时候在view下的Utilities下的File Inspector 设置platform 设置成iOS</p>
+<h3 id="2-编写playGrounp"><a href="#2-编写playGrounp" class="headerlink" title="2.编写playGrounp"></a>2.编写playGrounp</h3><p>直接上代码:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> XCPlayground</span><br><span class="line">var text = UIView()  </span><br><span class="line">text.backgroundColor = .greenColor()  </span><br><span class="line">text.frame = CGRectMake(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>) </span><br><span class="line">XCPlaygroundPage.currentPage.liveView = text</span><br></pre></td></tr></table></figure></p>
+<p>运行效果如下:<br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/57E0EFE8-376E-4E64-A619-72F431408DBF.png" alt="cmd-markdown-logo"></p>
+<p>以上是简单的例子,如果要在其中加入一些SDK可以使用CocoaPods引入.用法是一样的.如果不清楚CocoaPods是怎么使用,可以参考上一篇文章.</p>
+<p>Playgrounds可以说是Swift中的一个亮点，让你能够在编写代码的同时实时地看到运行结果，而无需再去重复经历传统的编辑-编译-运行-调试这一周期。当你在Playgrounds上把代码修改完成后，就可以将这段代码直接用到项目中去。对于学习新的API、原型代码、算法等很有帮助。不过它是存在于Swift中,下面来介绍一下objective-c中怎么实现的</p>
+<p>##KZPlayground<br>github上有一个开源项目有兴趣的可以学习一下<br><a href="https://github.com/krzysztofzablocki/KZPlayground" target="_blank" rel="external">https://github.com/krzysztofzablocki/KZPlayground</a></p>
 
       
     </div>
@@ -248,13 +259,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/02/NStimer/">NStimer</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/07/playground/">IOS INTERFACES WITH XCODE PLAYGROUNDS</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 zhangdeyu 的个人博客">zhangdeyu</a></p>
-        <p><span>发布时间:</span>2016年03月02日 - 13时37分</p>
-        <p><span>最后更新:</span>2016年03月04日 - 14时57分</p>
+        <p><span>发布时间:</span>2016年03月07日 - 16时53分</p>
+        <p><span>最后更新:</span>2016年03月07日 - 16时55分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/02/NStimer/" title="NStimer">http://yoursite.com/2016/03/02/NStimer/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/02/NStimer/　　作者: zhangdeyu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/07/playground/" title="IOS INTERFACES WITH XCODE PLAYGROUNDS">http://yoursite.com/2016/03/07/playground/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/07/playground/　　作者: zhangdeyu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -267,15 +278,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/03/02/hexoInstall/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Mac下实现github创建静态博客
-        
-      </div>
-    </a>
   
+    <a href="/2016/03/03/cocoapod/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CocoaPods管理</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -284,7 +291,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#playGrounp"><span class="toc-number">1.</span> <span class="toc-text">playGrounp</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-playGrounp"><span class="toc-number"></span> <span class="toc-text">什么是 playGrounp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建playGrounp"><span class="toc-number"></span> <span class="toc-text">创建playGrounp</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建playGrounp"><span class="toc-number">1.</span> <span class="toc-text">1. 创建playGrounp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-编写playGrounp"><span class="toc-number">2.</span> <span class="toc-text">2.编写playGrounp</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -346,7 +353,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/03/02/NStimer/" data-title="NStimer" data-url="http://yoursite.com/2016/03/02/NStimer/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/07/playground/" data-title="IOS INTERFACES WITH XCODE PLAYGROUNDS" data-url="http://yoursite.com/2016/03/07/playground/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -369,13 +376,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/02/hexoInstall/" title="上一篇: Mac下实现github创建静态博客">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/03/03/cocoapod/" title="下一篇: CocoaPods管理">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/playground/">IOS INTERFACES WITH XCODE PLAYGROUNDS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/03/cocoapod/">CocoaPods管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/02/hexoInstall/">Mac下实现github创建静态博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/02/NStimer/">NStimer</a></li></ul>
