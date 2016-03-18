@@ -12,7 +12,8 @@
 <meta property="og:site_name" content="张德宇的技术博客">
 <meta property="og:description">
 <meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/learn-you-a-reactivecocoa-for-great-good-1-638.jpg">
-<meta property="og:updated_time" content="2016-03-18T05:56:07.000Z">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/MCVMVMV.gif">
+<meta property="og:updated_time" content="2016-03-18T06:12:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactiveCocoa">
 <meta name="twitter:description">
@@ -243,7 +244,7 @@
 <p>2.方法:<br>filter: 对RACStream中的事件内容进行过滤<br>map: 会将事件中的数据转换成你想要的数据<br>flattenMap: 会将内部Signal的事件传递给外部Signal<br>distinctUntilChanged:简单理解为“流”的值有变化时反馈变化的值<br>doNext: 这个向Signal管道上添加添加副作用。它并不会改变事件，参数block也没有返回值，它返回一个执行了block的Signal，这样block中的副作用就被注入到了以前的Signal。<br>then: 当一个订阅者被发送了completed事件后，then:方法才会执行，订阅者会订阅then:方法返回的Signal，这个Signal是在block中返回的。<br>deliverOn: 参数为RACScheduler类的对象scheduler，这个方法会返回一个Signal，它的所有事件都会传递给scheduler参数所表示的线程，而以前管道上的副作用还会在以前的线程上。这个方法主要是切换线程。<br>subscribeOn: 功能跟deliverOn:相同，但是它也会将副作用也切换到制定线程中。</p>
 <p>#解决的问题<br>1.传统 iOS 开发过程中，状态以及状态之间依赖过多的问题<br>2.传统 MVC 架构的问题：Controller 比较复杂，可测试性差<br>3.提供统一的消息传递机制</p>
 <p>#问题的具体解决方法</p>
-<p>###状态依赖过多<br>例如，在用户帐户的登录界面，通常会有 2 个输入框（分别输入帐号和密码）和一个登录按钮。如果我们要加入一个限制条件：当用户输入完帐号和密码，并且登录的网络请求还未发出时，确定按钮才可以点击。通常情况下，我们需要监听这两个输入框的状态变化以及登录的网络请求状态，然后修改另一个控件的enabled状态。</p>
+<p>#状态依赖过多<br>例如，在用户帐户的登录界面，通常会有 2 个输入框（分别输入帐号和密码）和一个登录按钮。如果我们要加入一个限制条件：当用户输入完帐号和密码，并且登录的网络请求还未发出时，确定按钮才可以点击。通常情况下，我们需要监听这两个输入框的状态变化以及登录的网络请求状态，然后修改另一个控件的enabled状态。</p>
 <p>```python</p>
 <pre><code>RAC(self.loginButton, enabled) = [RACSignal
                                   combineLatest:@[
@@ -253,9 +254,10 @@
                                                       return @(username.length &gt; 0 &amp;&amp; password.length &gt; 0);
                                                   }];
 </code></pre><p> pass</p>
-<p>###试图解决 MVC 框架的问题</p>
+<p>#试图解决 MVC 框架的问题</p>
 <p>RAC 的信号机制很容易将某一个 Model 变量的变化与界面关联，所以非常容易应用 Model-View-ViewModel 框架。通过引入 ViewModel 层，然后用 RAC 将 ViewModel 与 View 关联，View 层的变化可以直接响应 ViewModel 层的变化，这使得 Controller 变得更加简单，由于 View 不再与 Model 绑定</p>
-<p>###统一消息传递机制<br>iOS 开发中有着各种消息传递机制，包括 KVO、Notification、delegation、block 以及 target-action 方式,RAC 将传统的 UI 控件事件进行了封装，使得以上各种消息传递机制都可以用 RAC 来完成</p>
+<p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/MCVMVMV.gif" alt="cmd-markdown-logo"></p>
+<p>#统一消息传递机制<br>iOS 开发中有着各种消息传递机制，包括 KVO、Notification、delegation、block 以及 target-action 方式,RAC 将传统的 UI 控件事件进行了封装，使得以上各种消息传递机制都可以用 RAC 来完成</p>
 <p>```python</p>
 <pre><code> [[[NSNotificationCenter defaultCenter]
   rac_addObserverForName:UIKeyboardDidChangeFrameNotification
@@ -302,7 +304,7 @@ return [RACSignal createSignal:^RACDisposable *(id&lt;RACSubscriber&gt; subscrib
         <p><span>本文标题:</span><a href="/2016/03/18/ReactiveCocoa/">ReactiveCocoa</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 zhangdeyu 的个人博客">zhangdeyu</a></p>
         <p><span>发布时间:</span>2016年03月18日 - 13时53分</p>
-        <p><span>最后更新:</span>2016年03月18日 - 13时56分</p>
+        <p><span>最后更新:</span>2016年03月18日 - 14时12分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/18/ReactiveCocoa/" title="ReactiveCocoa">http://yoursite.com/2016/03/18/ReactiveCocoa/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/18/ReactiveCocoa/　　作者: zhangdeyu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
