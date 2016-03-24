@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mac下实现github创建静态博客 | 张德宇的技术博客</title>
+  <title>Realm数据持久化 | 张德宇的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac下实现github创建静态博客">
-<meta property="og:url" content="http://yoursite.com/2016/03/02/hexoInstall/index.html">
+<meta property="og:title" content="Realm数据持久化">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/Realm/index.html">
 <meta property="og:site_name" content="张德宇的技术博客">
 <meta property="og:description">
-<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/0B4fEFbbW93y5dVZoRTBCbjJEVHc.png">
-<meta property="og:updated_time" content="2016-03-04T06:52:23.000Z">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/realm_logo.png">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/benchmarks.001b.png">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/benchmarks.002b.png">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/benchmarks.003b.png">
+<meta property="og:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/776EFF66-5A8F-4505-AEC6-8F609CF93D38.png">
+<meta property="og:updated_time" content="2016-03-24T10:05:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下实现github创建静态博客">
+<meta name="twitter:title" content="Realm数据持久化">
 <meta name="twitter:description">
-<meta name="twitter:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/0B4fEFbbW93y5dVZoRTBCbjJEVHc.png">
+<meta name="twitter:image" content="http://7xrfe5.com1.z0.glb.clouddn.com/realm_logo.png">
   
     <link rel="alternative" href="/atom.xml" title="张德宇的技术博客" type="application/atom+xml">
   
@@ -194,11 +198,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-hexoInstall" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Realm" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/02/hexoInstall/" class="article-date">
-      <time datetime="2016-03-02T05:53:39.000Z" itemprop="datePublished">2016-03-02</time>
+      <a href="/2016/03/24/Realm/" class="article-date">
+      <time datetime="2016-03-24T10:01:28.000Z" itemprop="datePublished">2016-03-24</time>
 </a>
     </div>
   
@@ -211,7 +215,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Mac下实现github创建静态博客
+      Realm数据持久化
     </h1>
   
 
@@ -222,7 +226,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Realm/">Realm</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -232,25 +236,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/0B4fEFbbW93y5dVZoRTBCbjJEVHc.png" alt="cmd-markdown-logo"></p>
+        <hr>
+<p><img src="http://7xrfe5.com1.z0.glb.clouddn.com/realm_logo.png" alt="cmd-markdown-logo"></p>
 <a id="more"></a>
-<ul>
-<li>安装环境</li>
-<li>创建博客</li>
-</ul>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><p>现在在github上创建的静态微博,大多部分是用hexo来实现的,而且hexo最好用npm来安装,npm是node.js来安装的.</p>
-<p>一步一步来安装,在Mac下安装环境个人觉得挺烦,所以要慢慢来.</p>
-<p>###安装node.js<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl  https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure></p>
-<p>也可以直接从官网下载<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>这样就安装完成了</p>
-<h3 id="创建一个Hexo的文件"><a href="#创建一个Hexo的文件" class="headerlink" title="创建一个Hexo的文件"></a>创建一个Hexo的文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>在blog目录下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo install</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 看看结果</p>
-<p>修改自己的hexo的配置<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repository: git@github.com:(github上的名字)/(github上的名字).github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></p>
-<h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><h3 id="github上创建Repository"><a href="#github上创建Repository" class="headerlink" title="github上创建Repository"></a>github上创建Repository</h3><p>在github上创建一个Repository,用git放到clone到本地,在blog目录下可以的source层级里可以用<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">'文件名'</span></span><br></pre></td></tr></table></figure></p>
-<p>去创建一个文件,编辑文件.然后发布一下,接着将blog目录下的public的层级下的文件copy到你的本地的目录里.上传文件到github就完成了<br>在浏览器中输入你的用户名.github.io就可以看到结果了.</p>
+<h2 id="Realm存储"><a href="#Realm存储" class="headerlink" title="Realm存储"></a>Realm存储</h2><p>Realm 能够让您以一种安全、耐用以及迅捷的方式来高效地编写应用的数据模型层<br>Reaml同时支持ReactNative,Swift,Java,Objective-c.这主要介绍的是Objective-c的用法.</p>
+<p>##Realm与其他数据存数的区别<br>说起数据的持久化存储,可以用SQlite,CoreData,序列化和反序列化,也可以用数组存到Plist.<br>下面我们来一一的进行对比.<br>Realm对于任何存储的方式来说性能都比较好,而且操作简单,对于SQlite可以存储实体类,对象,当然这一点CoreData也可以实现,但是学习CoreData是一件很烦的事(个人观点),Realm的官方文档写的很详细,炒作起来也很方便.很适合我们使用.这也是我选择Realm的主要原因.<br>看图说话<br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/benchmarks.001b.png" alt="cmd-markdown-logo"><br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/benchmarks.002b.png" alt="cmd-markdown-logo"><br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/benchmarks.003b.png" alt="cmd-markdown-logo"></p>
+<p>详细的可以参考<a href="https://realm.io/cn/" target="_blank" rel="external">官网</a></p>
+<p>##开发前的准备工作</p>
+<p>使用 Realm 构建应用的基本要求：iOS &gt;= 7, OS X &gt;= 10.9 并且支持 WatchKit。<br>需要使用 Xcode 6.4 或者以后的版本。<br>程序支持Objective‑C, Swift 1.2 &amp; Swift 2.x。</p>
+<p>###安装</p>
+<p>1, 静态框架</p>
+<p>下载 Realm 的最新版本并解压；<br>将 Realm.framework 从 ios/static/ 文件夹拖曳到您 Xcode    项目中的文件导航器当中。确保 Copy items if needed 选中然后单击 Finish；<br>在 Xcode 文件导航器中选择您的项目，然后选择您的应用目标，进入到<strong> Build Phases</strong> 选项卡中。在 Link Binary with Libraries 中单击 + 号然后添加 libc++.dylib；<br>如果你在用 Swift 来使用 Realm，那么将位于 Swift/RLMSupport.swift 的文件拖曳进您 Xcode 项目中的文件导航器当中，确保 Copy items if needed 选中</p>
+<p>2, CocoaPods<br>注意：目前不支持 CocoaPods 1.0.0 的发布候选版本。请使用最新的稳定版本。<br>安装CocoaPods 0.39.0 或者更高版本；<br>在您的Podfile中，添加pod ‘Realm’到您的 app 目标中，添加pod ‘Realm/Headers’到您的测试目标中；<br>在终端运行pod install；<br>采用 CocoaPods 生成的.xcworkspace来运行工程</p>
+<p>###查看<br>在Mac上支持一个Realm的数据管理器<br><img src="http://7xrfe5.com1.z0.glb.clouddn.com/776EFF66-5A8F-4505-AEC6-8F609CF93D38.png" alt="cmd-markdown-logo"></p>
+<p>还可以安装插件<br>安装 Realm 插件的最简单方式是通过点击”RealmPlugin”文件夹下的Alcatraz。您也可以手动进行安装：打开release zip 中的plugin/RealmPlugin.xcodeproj并进行编译，重启 Xcode之后插件即可生效。如果您使用 Xcode 菜单来建立一个新文件(File &gt; New &gt; File… — or ⌘N) ，您就可以看到有一个新建Realm模型的选项。<br>这些都做好了之后流可以愉快的开发了.</p>
 
       
     </div>
@@ -259,13 +258,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/02/hexoInstall/">Mac下实现github创建静态博客</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/24/Realm/">Realm数据持久化</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 zhangdeyu 的个人博客">zhangdeyu</a></p>
-        <p><span>发布时间:</span>2016年03月02日 - 13时53分</p>
-        <p><span>最后更新:</span>2016年03月04日 - 14时52分</p>
+        <p><span>发布时间:</span>2016年03月24日 - 18时01分</p>
+        <p><span>最后更新:</span>2016年03月24日 - 18时05分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/02/hexoInstall/" title="Mac下实现github创建静态博客">http://yoursite.com/2016/03/02/hexoInstall/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/02/hexoInstall/　　作者: zhangdeyu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/24/Realm/" title="Realm数据持久化">http://yoursite.com/2016/03/24/Realm/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/24/Realm/　　作者: zhangdeyu" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -278,18 +277,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/03/03/cocoapod/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          CocoaPods管理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/02/NStimer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NStimer</div>
+    <a href="/2016/03/18/ReactiveCocoa/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ReactiveCocoa</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -300,7 +290,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置环境"><span class="toc-number">1.</span> <span class="toc-text">配置环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo"><span class="toc-number">1.1.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建一个Hexo的文件"><span class="toc-number">1.2.</span> <span class="toc-text">创建一个Hexo的文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客"><span class="toc-number">2.</span> <span class="toc-text">创建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github上创建Repository"><span class="toc-number">2.1.</span> <span class="toc-text">github上创建Repository</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Realm存储"><span class="toc-number">1.</span> <span class="toc-text">Realm存储</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -362,7 +352,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/03/02/hexoInstall/" data-title="Mac下实现github创建静态博客" data-url="http://yoursite.com/2016/03/02/hexoInstall/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/24/Realm/" data-title="Realm数据持久化" data-url="http://yoursite.com/2016/03/24/Realm/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -385,13 +375,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/03/cocoapod/" title="上一篇: CocoaPods管理">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/03/02/NStimer/" title="下一篇: NStimer">
+            <a href="/2016/03/18/ReactiveCocoa/" title="下一篇: ReactiveCocoa">
                 <i class="fa fa-angle-right"></i>
             </a>
         
